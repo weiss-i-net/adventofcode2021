@@ -24,6 +24,7 @@ class Task2alt {
             String line = reader.next();
             data[size++] = Integer.parseInt(line, 2);
         }
+        reader.close();
 
         Arrays.sort(data, 0, size);
 
@@ -72,7 +73,6 @@ class Task2alt {
 
         System.out.println(ox*co);
 
-        reader.close();
     }
 
 }
