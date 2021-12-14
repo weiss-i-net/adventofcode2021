@@ -1,9 +1,13 @@
 #!/usr/bin/python3
-import sys, os
+import sys, os, itertools
+from collections import defaultdict, Counter, deque
+
 if not os.path.exists("input"):
     os.system("cp ../getinput.sh . && ./getinput.sh")
 with open("input" if len(sys.argv) == 1 else sys.argv[1]) as file:
     lines = file.read().splitlines()
+
+
 
 
 
