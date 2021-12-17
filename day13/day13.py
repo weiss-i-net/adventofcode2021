@@ -21,8 +21,7 @@ for line in lines:
         dir, num = line.split(' ')[2].split('=')
         num = int(num)
 
-        p = set((min(x, 2*num-x) if dir == 'x' else x,
-                 min(y, 2*num-y) if dir == 'y' else y) for x, y in p)
+        p = set((min(x, 2*num-x), y) if dir == 'x' else (x, min(y, 2*num-y)) for x, y in p)
 
         if num == 655:
             print("Part 1:", len(p))
